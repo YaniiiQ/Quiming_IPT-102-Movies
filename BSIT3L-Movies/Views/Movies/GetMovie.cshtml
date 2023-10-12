@@ -1,6 +1,4 @@
 ﻿@model BSIT3L_Movies.Models.MovieViewModel
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,10 +6,30 @@
 </head>
 <body>
     <h2>Movie Details</h2>
-    <p>Movie ID: @Model.Id</p>
-    <p>Movie Name: @Model.Name</p>
-    <p>Rating: @Model.Rating</p>
-    <p>Release Year: @Model.ReleaseYear</p>
-    <p>Genre: @Model.Genre</p>
+    <div class="card mb-3">
+        <h3 class="MovieID">@Model.Id</h3>
+        <div class="card-body">
+            <h5 class="Movietitle">@Model.Name</h5>
+            <h6 class="Moviegenre">@Model.ReleaseYear</h6>
+        <div>
+            <img src=" @Model.ImageSource" alt="@Model.Name" width="100%" , height=" 50%">
+
+        </div>
+        <div class="card-body">
+                <p class="card-text">With the help of allies Lt. Jim Gordon (Gary Oldman) and DA Harvey Dent (Aaron Eckhart), Batman (Christian Bale) has been able to keep a tight lid on crime in Gotham City. But when a vile young criminal calling himself the Joker (Heath Ledger) suddenly throws the town into chaos, the caped Crusader begins to tread a fine line between heroism and vigilantism..</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item">Genre: @Model.Genre</li>
+            <li class="list-group-item">Ratings: @Model.Rating</li>
+        </ul>
+        <div class="card-body">
+            <div>
+              <a href="#" class="Movie-link">Movie Link</a>
+            </div>
+            <a href="@Model.YTurl" class="Youtube-link"> Trailer link</a>
+        </div>
+        </div>
+        </div>
+
 </body>
 </html>
